@@ -1,10 +1,10 @@
 {
-  "latestVersionCode": 25,
-  "latestVersionName": "0.9.12-poc",
-  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/shopkeeper-v0.9.12-poc/mavrify-shopkeeper-v0.9.12-poc.apk",
-  "apkSha256": "c103ef32f148509bb7715cac6fa5fbffae8c49a23ab07d43c7925a47ab3d5011",
-  "apkSizeBytes": 111742748,
+  "latestVersionCode": 26,
+  "latestVersionName": "0.9.13-poc",
+  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/shopkeeper-v0.9.13-poc/mavrify-shopkeeper-v0.9.13-poc.apk",
+  "apkSha256": "303849a3d2938f4c390a53997bfe884896fd2431c0054db89e274b540c7ef147",
+  "apkSizeBytes": 111759187,
   "minSupportedVersionCode": 1,
-  "releaseNotes": "Auto-built from private repo commit 5dac0a117285b0d0fe397c1edbbc22685a062dbc",
-  "releasedAt": "2026-05-30T17:31:27Z"
+  "releaseNotes": "Auto-built from private repo commit ec8ee4eaf9eccdbfbbc22eae9b4197faa87ac3d9",
+  "releasedAt": "2026-05-30T17:43:44Z"
 }
