@@ -1,10 +1,10 @@
 {
-  "latestVersionCode": 64,
-  "latestVersionName": "0.9.37-poc",
-  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/v0.9.37-poc/mavrify-lock-v0.9.37-poc.apk",
-  "apkSha256": "993becdef4b009bc2bbe450997c4ef90ff4d9bd0db95ba67e797273fa70089cc",
+  "latestVersionCode": 65,
+  "latestVersionName": "0.9.38-poc",
+  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/v0.9.38-poc/mavrify-lock-v0.9.38-poc.apk",
+  "apkSha256": "7e8b66b4af9ea72988f68b4c4862a673c0fbfbec490556dade1621369c9fb501",
   "apkSizeBytes": 16598035,
   "minSupportedVersionCode": 1,
-  "releaseNotes": "Auto-built from private repo commit baecc37622352b28cc1876d1eebb2bd3f00678dd",
-  "releasedAt": "2026-06-04T19:03:00Z"
+  "releaseNotes": "Auto-built from private repo commit 04e873b35ec8f773007964c81103142319f92660",
+  "releasedAt": "2026-06-05T17:42:29Z"
 }
