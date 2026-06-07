@@ -1,486 +1,444 @@
 {
- "bundleVersion": 5,
- "updatedAt": "2026-06-07",
- "minAndroidApi": 30,
- "families": [
-  {
-   "id": "one_ui",
-   "label": "Samsung (One UI)",
-   "priority": 10,
-   "match": {
-    "manufacturers": [
-     "samsung"
-    ],
-    "skinPackages": [
-     "com.samsung.android.app.settings.bixby",
-     "com.sec.android.app.launcher"
-    ]
-   },
-   "steps": [
+  "bundleVersion": 6,
+  "updatedAt": "2026-06-07T13:38:34Z",
+  "minAndroidApi": 30,
+  "families": [
     {
-     "order": 1,
-     "instruction": "Open Settings, then About phone.",
-     "settingsPath": "Settings > About phone",
-     "deepLinkIntent": "",
-     "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
+      "id": "one_ui",
+      "label": "Samsung (One UI)",
+      "priority": 10,
+      "match": {
+        "manufacturers": [
+          "samsung"
+        ],
+        "skinPackages": [
+          "com.samsung.android.app.settings.bixby",
+          "com.sec.android.app.launcher"
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "instruction": "Open Settings, then About phone.",
+          "settingsPath": "Settings > About phone",
+          "deepLinkIntent": "",
+          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
+        },
+        {
+          "order": 2,
+          "instruction": "Tap 'Software information'.",
+          "settingsPath": "Settings > About phone > Software information",
+          "deepLinkIntent": "",
+          "instruction_ur": "⁨Software information⁩ پر ٹیپ کریں۔"
+        },
+        {
+          "order": 3,
+          "instruction": "Tap 'Build number' 7 times until 'Developer mode has been enabled' appears. Enter the PIN/pattern if asked.",
+          "settingsPath": "Settings > About phone > Software information > Build number",
+          "deepLinkIntent": "",
+          "instruction_ur": "⁨Build number⁩ پر 7 بار ٹیپ کریں جب تک ⁨Developer mode has been enabled⁩ نہ آ جائے۔ اگر پن/پیٹرن مانگے تو درج کریں۔"
+        },
+        {
+          "order": 4,
+          "instruction": "Go back to Settings and open 'Developer options' — it's at the very bottom of the list.",
+          "settingsPath": "Settings > Developer options",
+          "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
+          "detect": "dev_options_enabled",
+          "instruction_ur": "واپس سیٹنگ میں جائیں اور فہرست میں بالکل آخر میں ⁨Developer options⁩ کھولیں۔"
+        },
+        {
+          "order": 5,
+          "instruction": "Turn on 'Wireless debugging' and accept the prompt. Then tap the WORDS 'Wireless debugging' (not just the switch) to open its own screen. Can't find it? Type 'wireless' in the search box at the top of Settings and choose 'Wireless debugging' — NOT 'USB debugging'.",
+          "settingsPath": "Settings > Developer options > Wireless debugging",
+          "deepLinkIntent": "",
+          "detect": "wireless_debugging_enabled",
+          "instruction_ur": "⁨Wireless debugging⁩ آن کریں اور آنے والی اجازت کو منظور کریں۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔"
+        },
+        {
+          "order": 6,
+          "instruction": "Done — the customer's phone is ready! Go back to this app: the next screen will tell you exactly when to open the pairing card. Do NOT open 'Pair device with pairing code' yet — its 6-digit code expires quickly.",
+          "settingsPath": null,
+          "deepLinkIntent": null,
+          "detect": "pairing_screen_open",
+          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔"
+        }
+      ],
+      "pairing": {
+        "method": "code",
+        "connectDiscovery": "mdns_then_manual",
+        "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
+      },
+      "caveats": [
+        "Knox may flag tamper if bootloader is later unlocked — irrelevant to Device Owner provisioning but raises bypass cost (good)."
+      ],
+      "accountGateRisk": "none",
+      "verified": {
+        "status": "unverified",
+        "onModels": [
+          "SM-S9188 (S23 Ultra, Android 16, One UI 8.0 — Test 1/2 only)",
+          "SM-N986U (Note 20, Android 13, One UI 5 — pair-with-code + set-device-owner PASS)"
+        ],
+        "androidApis": [
+          33,
+          36
+        ],
+        "notes": "Pair-with-code + mDNS + set-device-owner proven on the Note 20 (docs/21 §10.5). Android 16 Device Owner path pending wipeable unit (docs/21 §10).",
+        "date": "2026-05-30"
+      }
     },
     {
-     "order": 2,
-     "instruction": "Tap 'Software information'.",
-     "settingsPath": "Settings > About phone > Software information",
-     "deepLinkIntent": "",
-     "instruction_ur": "⁨Software information⁩ پر ٹیپ کریں۔"
+      "id": "miui_hyperos",
+      "label": "Xiaomi / Redmi / Poco (MIUI / HyperOS)",
+      "priority": 10,
+      "match": {
+        "manufacturers": [
+          "xiaomi",
+          "redmi",
+          "poco"
+        ],
+        "skinPackages": [
+          "com.miui.securitycenter",
+          "com.miui.home"
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "instruction": "Open Settings > About phone.",
+          "settingsPath": "Settings > About phone",
+          "deepLinkIntent": "",
+          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
+        },
+        {
+          "order": 2,
+          "instruction": "Tap 'All specs', then tap 'OS version' 7 times to enable Developer options.",
+          "settingsPath": "Settings > About phone > All specs > OS version",
+          "deepLinkIntent": "",
+          "instruction_ur": "⁨All specs⁩ پر ٹیپ کریں، پھر ⁨OS version⁩ پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
+        },
+        {
+          "order": 3,
+          "instruction": "Go to Settings > Additional settings > Developer options.",
+          "settingsPath": "Settings > Additional settings > Developer options",
+          "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
+          "detect": "dev_options_enabled",
+          "instruction_ur": "سیٹنگ میں ⁨Additional settings⁩ پھر ⁨Developer options⁩ کھولیں۔"
+        },
+        {
+          "order": 4,
+          "instruction": "Turn on 'Wireless debugging'. If a Mi-account / SIM prompt appears, STOP and tell the shop — this device may not support the ADB tier without an account. Then tap the WORDS 'Wireless debugging' (not just the switch) to open its own screen. Can't find it? Type 'wireless' in the search box at the top of Settings and choose 'Wireless debugging' — NOT 'USB debugging'.",
+          "settingsPath": "Settings > Additional settings > Developer options > Wireless debugging",
+          "deepLinkIntent": "",
+          "detect": "wireless_debugging_enabled",
+          "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ اگر ⁨Mi-account⁩ یا ⁨SIM⁩ کا پیغام آئے تو رک جائیں اور دکان کو بتائیں — ممکن ہے یہ فون بغیر اکاؤنٹ کے مضبوط لاک سپورٹ نہ کرے۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔"
+        },
+        {
+          "order": 5,
+          "instruction": "Done — the customer's phone is ready! Go back to this app: the next screen will tell you exactly when to open the pairing card. Do NOT open 'Pair device with pairing code' yet — its 6-digit code expires quickly.",
+          "settingsPath": null,
+          "deepLinkIntent": null,
+          "detect": "pairing_screen_open",
+          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔"
+        }
+      ],
+      "pairing": {
+        "method": "code",
+        "connectDiscovery": "mdns_then_manual",
+        "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
+      },
+      "caveats": [
+        "MIUI/HyperOS has historically gated 'USB debugging (Security settings)' behind a signed-in Mi account + SIM + waiting period. If the same gate applies to Wireless debugging, it conflicts with the no-accounts requirement for set-device-owner — this device would be Device-Admin-only.",
+        "Confirm whether 'Install via USB' style restrictions also gate the dpm path."
+      ],
+      "accountGateRisk": "possible",
+      "verified": {
+        "status": "unverified",
+        "onModels": [],
+        "androidApis": [],
+        "notes": "Highest-priority skin to test for the account gate (docs/21 §8.1 / §10.B).",
+        "date": "2026-05-30"
+      }
     },
     {
-     "order": 3,
-     "instruction": "Tap 'Build number' 7 times until 'Developer mode has been enabled' appears. Enter the PIN/pattern if asked.",
-     "settingsPath": "Settings > About phone > Software information > Build number",
-     "deepLinkIntent": "",
-     "instruction_ur": "⁨Build number⁩ پر 7 بار ٹیپ کریں جب تک ⁨Developer mode has been enabled⁩ نہ آ جائے۔ اگر پن/پیٹرن مانگے تو درج کریں۔"
+      "id": "transsion",
+      "label": "Tecno / Infinix / itel (HiOS / XOS / itel-OS)",
+      "priority": 10,
+      "match": {
+        "manufacturers": [
+          "tecno",
+          "infinix",
+          "itel",
+          "transsion"
+        ],
+        "skinPackages": [
+          "com.transsion.*",
+          "com.rlk.*"
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "instruction": "Open Settings > About phone.",
+          "settingsPath": "Settings > About phone",
+          "deepLinkIntent": "",
+          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
+        },
+        {
+          "order": 2,
+          "instruction": "Tap 'Build number' (or 'Version') 7 times to enable Developer options.",
+          "settingsPath": "Settings > About phone > Build number",
+          "deepLinkIntent": "",
+          "instruction_ur": "⁨Build number⁩ (یا ⁨Version⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
+        },
+        {
+          "order": 3,
+          "instruction": "Go to Settings > System > Developer options.",
+          "settingsPath": "Settings > System > Developer options",
+          "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
+          "detect": "dev_options_enabled",
+          "instruction_ur": "سیٹنگ میں ⁨System⁩ پھر ⁨Developer options⁩ کھولیں۔"
+        },
+        {
+          "order": 4,
+          "instruction": "Turn on 'Wireless debugging'. Then tap the WORDS 'Wireless debugging' (not just the switch) to open its own screen. Can't find it? Type 'wireless' in the search box at the top of Settings and choose 'Wireless debugging' — NOT 'USB debugging'.",
+          "settingsPath": "Settings > System > Developer options > Wireless debugging",
+          "deepLinkIntent": "",
+          "detect": "wireless_debugging_enabled",
+          "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔"
+        },
+        {
+          "order": 5,
+          "instruction": "Done — the customer's phone is ready! Go back to this app: the next screen will tell you exactly when to open the pairing card. Do NOT open 'Pair device with pairing code' yet — its 6-digit code expires quickly.",
+          "settingsPath": null,
+          "deepLinkIntent": null,
+          "detect": "pairing_screen_open",
+          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔"
+        }
+      ],
+      "pairing": {
+        "method": "code",
+        "connectDiscovery": "mdns_then_manual",
+        "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
+      },
+      "caveats": [
+        "Transsion devices ship Palmstore/Paytrigger and may bundle their own financing/lock tooling — check for conflicts with our Device Owner grant.",
+        "Large share of low-end PK market; many ship Android Go editions — confirm Wireless Debugging is present (needs API 30+)."
+      ],
+      "accountGateRisk": "possible",
+      "verified": {
+        "status": "unverified",
+        "onModels": [],
+        "androidApis": [],
+        "notes": "Meaningful PK volume; test for Paytrigger interaction + Android-Go menu differences.",
+        "date": "2026-05-30"
+      }
     },
     {
-     "order": 4,
-     "instruction": "Go back to Settings and open 'Developer options' — it's at the very bottom of the list.",
-     "settingsPath": "Settings > Developer options",
-     "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
-     "detect": "dev_options_enabled",
-     "instruction_ur": "واپس سیٹنگ میں جائیں اور فہرست میں بالکل آخر میں ⁨Developer options⁩ کھولیں۔"
+      "id": "coloros",
+      "label": "Oppo / Realme (ColorOS / realme UI)",
+      "priority": 10,
+      "match": {
+        "manufacturers": [
+          "oppo",
+          "realme"
+        ],
+        "skinPackages": [
+          "com.coloros.*",
+          "com.oppo.*",
+          "com.realme.*"
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "instruction": "Open Settings > About device (or About phone).",
+          "settingsPath": "Settings > About device",
+          "deepLinkIntent": "",
+          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About device⁩ (یا ⁨About phone⁩) میں جائیں۔"
+        },
+        {
+          "order": 2,
+          "instruction": "Tap 'Version' (or 'Build number') 7 times to enable Developer options.",
+          "settingsPath": "Settings > About device > Version",
+          "deepLinkIntent": "",
+          "instruction_ur": "⁨Version⁩ (یا ⁨Build number⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
+        },
+        {
+          "order": 3,
+          "instruction": "Go to Settings > Additional settings > Developer options.",
+          "settingsPath": "Settings > Additional settings > Developer options",
+          "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
+          "detect": "dev_options_enabled",
+          "instruction_ur": "سیٹنگ میں ⁨Additional settings⁩ پھر ⁨Developer options⁩ کھولیں۔"
+        },
+        {
+          "order": 4,
+          "instruction": "Turn on 'Wireless debugging'. Watch for an account/verification prompt — if it appears, flag this device. Then tap the WORDS 'Wireless debugging' (not just the switch) to open its own screen. Can't find it? Type 'wireless' in the search box at the top of Settings and choose 'Wireless debugging' — NOT 'USB debugging'.",
+          "settingsPath": "Settings > Additional settings > Developer options > Wireless debugging",
+          "deepLinkIntent": "",
+          "detect": "wireless_debugging_enabled",
+          "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ اگر اکاؤنٹ یا تصدیق کا پیغام آئے تو اس فون کو نشان زد کریں۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔"
+        },
+        {
+          "order": 5,
+          "instruction": "Done — the customer's phone is ready! Go back to this app: the next screen will tell you exactly when to open the pairing card. Do NOT open 'Pair device with pairing code' yet — its 6-digit code expires quickly.",
+          "settingsPath": null,
+          "deepLinkIntent": null,
+          "detect": "pairing_screen_open",
+          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔"
+        }
+      ],
+      "pairing": {
+        "method": "code",
+        "connectDiscovery": "mdns_then_manual",
+        "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
+      },
+      "caveats": [
+        "ColorOS has at times required extra confirmation or account sign-in for debugging — verify on the no-accounts state."
+      ],
+      "accountGateRisk": "possible",
+      "verified": {
+        "status": "unverified",
+        "onModels": [],
+        "androidApis": [],
+        "notes": "",
+        "date": "2026-05-30"
+      }
     },
     {
-     "order": 5,
-     "instruction": "Turn on 'Wireless debugging' and accept the prompt.",
-     "settingsPath": "Settings > Developer options > Wireless debugging",
-     "deepLinkIntent": "",
-     "detect": "wireless_debugging_enabled",
-     "instruction_ur": "⁨Wireless debugging⁩ آن کریں اور آنے والی اجازت کو منظور کریں۔"
+      "id": "funtouch",
+      "label": "Vivo (FuntouchOS / OriginOS)",
+      "priority": 10,
+      "match": {
+        "manufacturers": [
+          "vivo",
+          "iqoo"
+        ],
+        "skinPackages": [
+          "com.vivo.*",
+          "com.bbk.*"
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "instruction": "Open Settings > About phone (or More settings > About phone).",
+          "settingsPath": "Settings > About phone",
+          "deepLinkIntent": "",
+          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ (یا ⁨More settings⁩ پھر ⁨About phone⁩) میں جائیں۔"
+        },
+        {
+          "order": 2,
+          "instruction": "Tap 'Software version' (or 'Build number') 7 times to enable Developer options.",
+          "settingsPath": "Settings > About phone > Software version",
+          "deepLinkIntent": "",
+          "instruction_ur": "⁨Software version⁩ (یا ⁨Build number⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
+        },
+        {
+          "order": 3,
+          "instruction": "Go to Settings > System management > Developer options (path varies by version).",
+          "settingsPath": "Settings > System management > Developer options",
+          "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
+          "detect": "dev_options_enabled",
+          "instruction_ur": "سیٹنگ میں ⁨System management⁩ پھر ⁨Developer options⁩ کھولیں (راستہ ورژن کے مطابق بدل سکتا ہے)۔"
+        },
+        {
+          "order": 4,
+          "instruction": "Turn on 'Wireless debugging'. Then tap the WORDS 'Wireless debugging' (not just the switch) to open its own screen. Can't find it? Type 'wireless' in the search box at the top of Settings and choose 'Wireless debugging' — NOT 'USB debugging'.",
+          "settingsPath": "Settings > System management > Developer options > Wireless debugging",
+          "deepLinkIntent": "",
+          "detect": "wireless_debugging_enabled",
+          "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔"
+        },
+        {
+          "order": 5,
+          "instruction": "Done — the customer's phone is ready! Go back to this app: the next screen will tell you exactly when to open the pairing card. Do NOT open 'Pair device with pairing code' yet — its 6-digit code expires quickly.",
+          "settingsPath": null,
+          "deepLinkIntent": null,
+          "detect": "pairing_screen_open",
+          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔"
+        }
+      ],
+      "pairing": {
+        "method": "code",
+        "connectDiscovery": "mdns_then_manual",
+        "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
+      },
+      "caveats": [
+        "Developer options location moves between FuntouchOS and OriginOS versions — keep the deep link as the primary jump."
+      ],
+      "accountGateRisk": "possible",
+      "verified": {
+        "status": "unverified",
+        "onModels": [],
+        "androidApis": [],
+        "notes": "",
+        "date": "2026-05-30"
+      }
     },
     {
-     "order": 6,
-     "instruction": "Tap 'Pair device with pairing code' — NOT the QR option. A small card opens showing a 6-digit code and an IP address & port.",
-     "settingsPath": "Settings > Developer options > Wireless debugging > Pair device with pairing code",
-     "deepLinkIntent": "",
-     "detect": "pairing_screen_open",
-     "instruction_ur": "⁨Pair device with pairing code⁩ پر ٹیپ کریں — ⁨QR⁩ والا آپشن نہیں۔ ایک چھوٹا کارڈ کھلے گا جس پر 6 ہندسوں کا کوڈ اور ⁨IP address & port⁩ لکھا ہوگا۔"
-    },
-    {
-     "order": 7,
-     "instruction": "On the shop phone, tap 'Scan the customer's screen' and point the camera at that card — or type the 6-digit code by hand.",
-     "settingsPath": "",
-     "deepLinkIntent": "",
-     "instruction_ur": "دکان والے فون پر «گاہک کی اسکرین اسکین کریں» دبائیں اور کیمرہ اسی کارڈ پر کریں — یا 6 ہندسوں کا کوڈ ہاتھ سے ٹائپ کر دیں۔"
+      "id": "stock",
+      "label": "Stock / near-stock (Pixel, Motorola, Nokia, others)",
+      "priority": 1000,
+      "match": {
+        "isFallback": true
+      },
+      "steps": [
+        {
+          "order": 1,
+          "instruction": "Open Settings > About phone.",
+          "settingsPath": "Settings > About phone",
+          "deepLinkIntent": "",
+          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
+        },
+        {
+          "order": 2,
+          "instruction": "Tap 'Build number' 7 times to enable Developer options.",
+          "settingsPath": "Settings > About phone > Build number",
+          "deepLinkIntent": "",
+          "instruction_ur": "⁨Build number⁩ پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
+        },
+        {
+          "order": 3,
+          "instruction": "Go to Settings > System > Developer options.",
+          "settingsPath": "Settings > System > Developer options",
+          "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
+          "detect": "dev_options_enabled",
+          "instruction_ur": "سیٹنگ میں ⁨System⁩ پھر ⁨Developer options⁩ کھولیں۔"
+        },
+        {
+          "order": 4,
+          "instruction": "Turn on 'Wireless debugging'. Then tap the WORDS 'Wireless debugging' (not just the switch) to open its own screen. Can't find it? Type 'wireless' in the search box at the top of Settings and choose 'Wireless debugging' — NOT 'USB debugging'.",
+          "settingsPath": "Settings > System > Developer options > Wireless debugging",
+          "deepLinkIntent": "",
+          "detect": "wireless_debugging_enabled",
+          "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔"
+        },
+        {
+          "order": 5,
+          "instruction": "Done — the customer's phone is ready! Go back to this app: the next screen will tell you exactly when to open the pairing card. Do NOT open 'Pair device with pairing code' yet — its 6-digit code expires quickly.",
+          "settingsPath": null,
+          "deepLinkIntent": null,
+          "detect": "pairing_screen_open",
+          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔"
+        }
+      ],
+      "pairing": {
+        "method": "code",
+        "connectDiscovery": "mdns_then_manual",
+        "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
+      },
+      "caveats": [
+        "Cleanest path — closest to AOSP. Use as the default when no skin family matches."
+      ],
+      "accountGateRisk": "none",
+      "verified": {
+        "status": "unverified",
+        "onModels": [],
+        "androidApis": [],
+        "notes": "AOSP-standard menu path.",
+        "date": "2026-05-30"
+      }
     }
-   ],
-   "pairing": {
-    "method": "code",
-    "connectDiscovery": "mdns_then_manual",
-    "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
-   },
-   "caveats": [
-    "Knox may flag tamper if bootloader is later unlocked — irrelevant to Device Owner provisioning but raises bypass cost (good)."
-   ],
-   "accountGateRisk": "none",
-   "verified": {
-    "status": "unverified",
-    "onModels": [
-     "SM-S9188 (S23 Ultra, Android 16, One UI 8.0 — Test 1/2 only)",
-     "SM-N986U (Note 20, Android 13, One UI 5 — pair-with-code + set-device-owner PASS)"
-    ],
-    "androidApis": [
-     33,
-     36
-    ],
-    "notes": "Pair-with-code + mDNS + set-device-owner proven on the Note 20 (docs/21 §10.5). Android 16 Device Owner path pending wipeable unit (docs/21 §10).",
-    "date": "2026-05-30"
-   }
-  },
-  {
-   "id": "miui_hyperos",
-   "label": "Xiaomi / Redmi / Poco (MIUI / HyperOS)",
-   "priority": 10,
-   "match": {
-    "manufacturers": [
-     "xiaomi",
-     "redmi",
-     "poco"
-    ],
-    "skinPackages": [
-     "com.miui.securitycenter",
-     "com.miui.home"
-    ]
-   },
-   "steps": [
-    {
-     "order": 1,
-     "instruction": "Open Settings > About phone.",
-     "settingsPath": "Settings > About phone",
-     "deepLinkIntent": "",
-     "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
-    },
-    {
-     "order": 2,
-     "instruction": "Tap 'All specs', then tap 'OS version' 7 times to enable Developer options.",
-     "settingsPath": "Settings > About phone > All specs > OS version",
-     "deepLinkIntent": "",
-     "instruction_ur": "⁨All specs⁩ پر ٹیپ کریں، پھر ⁨OS version⁩ پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
-    },
-    {
-     "order": 3,
-     "instruction": "Go to Settings > Additional settings > Developer options.",
-     "settingsPath": "Settings > Additional settings > Developer options",
-     "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
-     "detect": "dev_options_enabled",
-     "instruction_ur": "سیٹنگ میں ⁨Additional settings⁩ پھر ⁨Developer options⁩ کھولیں۔"
-    },
-    {
-     "order": 4,
-     "instruction": "Turn on 'Wireless debugging'. If a Mi-account / SIM prompt appears, STOP and tell the shop — this device may not support the ADB tier without an account.",
-     "settingsPath": "Settings > Additional settings > Developer options > Wireless debugging",
-     "deepLinkIntent": "",
-     "detect": "wireless_debugging_enabled",
-     "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ اگر ⁨Mi-account⁩ یا ⁨SIM⁩ کا پیغام آئے تو رک جائیں اور دکان کو بتائیں — ممکن ہے یہ فون بغیر اکاؤنٹ کے مضبوط لاک سپورٹ نہ کرے۔"
-    },
-    {
-     "order": 5,
-     "instruction": "Tap 'Pair device with pairing code' — NOT the QR option. A small card opens showing a 6-digit code and an IP address & port.",
-     "settingsPath": "Settings > Additional settings > Developer options > Wireless debugging > Pair device with pairing code",
-     "deepLinkIntent": "",
-     "detect": "pairing_screen_open",
-     "instruction_ur": "⁨Pair device with pairing code⁩ پر ٹیپ کریں — ⁨QR⁩ والا آپشن نہیں۔ ایک چھوٹا کارڈ کھلے گا جس پر 6 ہندسوں کا کوڈ اور ⁨IP address & port⁩ لکھا ہوگا۔"
-    },
-    {
-     "order": 6,
-     "instruction": "On the shop phone, tap 'Scan the customer's screen' and point the camera at that card — or type the 6-digit code by hand.",
-     "settingsPath": "",
-     "deepLinkIntent": "",
-     "instruction_ur": "دکان والے فون پر «گاہک کی اسکرین اسکین کریں» دبائیں اور کیمرہ اسی کارڈ پر کریں — یا 6 ہندسوں کا کوڈ ہاتھ سے ٹائپ کر دیں۔"
-    }
-   ],
-   "pairing": {
-    "method": "code",
-    "connectDiscovery": "mdns_then_manual",
-    "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
-   },
-   "caveats": [
-    "MIUI/HyperOS has historically gated 'USB debugging (Security settings)' behind a signed-in Mi account + SIM + waiting period. If the same gate applies to Wireless debugging, it conflicts with the no-accounts requirement for set-device-owner — this device would be Device-Admin-only.",
-    "Confirm whether 'Install via USB' style restrictions also gate the dpm path."
-   ],
-   "accountGateRisk": "possible",
-   "verified": {
-    "status": "unverified",
-    "onModels": [],
-    "androidApis": [],
-    "notes": "Highest-priority skin to test for the account gate (docs/21 §8.1 / §10.B).",
-    "date": "2026-05-30"
-   }
-  },
-  {
-   "id": "transsion",
-   "label": "Tecno / Infinix / itel (HiOS / XOS / itel-OS)",
-   "priority": 10,
-   "match": {
-    "manufacturers": [
-     "tecno",
-     "infinix",
-     "itel",
-     "transsion"
-    ],
-    "skinPackages": [
-     "com.transsion.*",
-     "com.rlk.*"
-    ]
-   },
-   "steps": [
-    {
-     "order": 1,
-     "instruction": "Open Settings > About phone.",
-     "settingsPath": "Settings > About phone",
-     "deepLinkIntent": "",
-     "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
-    },
-    {
-     "order": 2,
-     "instruction": "Tap 'Build number' (or 'Version') 7 times to enable Developer options.",
-     "settingsPath": "Settings > About phone > Build number",
-     "deepLinkIntent": "",
-     "instruction_ur": "⁨Build number⁩ (یا ⁨Version⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
-    },
-    {
-     "order": 3,
-     "instruction": "Go to Settings > System > Developer options.",
-     "settingsPath": "Settings > System > Developer options",
-     "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
-     "detect": "dev_options_enabled",
-     "instruction_ur": "سیٹنگ میں ⁨System⁩ پھر ⁨Developer options⁩ کھولیں۔"
-    },
-    {
-     "order": 4,
-     "instruction": "Turn on 'Wireless debugging'.",
-     "settingsPath": "Settings > System > Developer options > Wireless debugging",
-     "deepLinkIntent": "",
-     "detect": "wireless_debugging_enabled",
-     "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔"
-    },
-    {
-     "order": 5,
-     "instruction": "Tap 'Pair device with pairing code' — NOT the QR option. A small card opens showing a 6-digit code and an IP address & port.",
-     "settingsPath": "Settings > System > Developer options > Wireless debugging > Pair device with pairing code",
-     "deepLinkIntent": "",
-     "detect": "pairing_screen_open",
-     "instruction_ur": "⁨Pair device with pairing code⁩ پر ٹیپ کریں — ⁨QR⁩ والا آپشن نہیں۔ ایک چھوٹا کارڈ کھلے گا جس پر 6 ہندسوں کا کوڈ اور ⁨IP address & port⁩ لکھا ہوگا۔"
-    },
-    {
-     "order": 6,
-     "instruction": "On the shop phone, tap 'Scan the customer's screen' and point the camera at that card — or type the 6-digit code by hand.",
-     "settingsPath": "",
-     "deepLinkIntent": "",
-     "instruction_ur": "دکان والے فون پر «گاہک کی اسکرین اسکین کریں» دبائیں اور کیمرہ اسی کارڈ پر کریں — یا 6 ہندسوں کا کوڈ ہاتھ سے ٹائپ کر دیں۔"
-    }
-   ],
-   "pairing": {
-    "method": "code",
-    "connectDiscovery": "mdns_then_manual",
-    "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
-   },
-   "caveats": [
-    "Transsion devices ship Palmstore/Paytrigger and may bundle their own financing/lock tooling — check for conflicts with our Device Owner grant.",
-    "Large share of low-end PK market; many ship Android Go editions — confirm Wireless Debugging is present (needs API 30+)."
-   ],
-   "accountGateRisk": "possible",
-   "verified": {
-    "status": "unverified",
-    "onModels": [],
-    "androidApis": [],
-    "notes": "Meaningful PK volume; test for Paytrigger interaction + Android-Go menu differences.",
-    "date": "2026-05-30"
-   }
-  },
-  {
-   "id": "coloros",
-   "label": "Oppo / Realme (ColorOS / realme UI)",
-   "priority": 10,
-   "match": {
-    "manufacturers": [
-     "oppo",
-     "realme"
-    ],
-    "skinPackages": [
-     "com.coloros.*",
-     "com.oppo.*",
-     "com.realme.*"
-    ]
-   },
-   "steps": [
-    {
-     "order": 1,
-     "instruction": "Open Settings > About device (or About phone).",
-     "settingsPath": "Settings > About device",
-     "deepLinkIntent": "",
-     "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About device⁩ (یا ⁨About phone⁩) میں جائیں۔"
-    },
-    {
-     "order": 2,
-     "instruction": "Tap 'Version' (or 'Build number') 7 times to enable Developer options.",
-     "settingsPath": "Settings > About device > Version",
-     "deepLinkIntent": "",
-     "instruction_ur": "⁨Version⁩ (یا ⁨Build number⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
-    },
-    {
-     "order": 3,
-     "instruction": "Go to Settings > Additional settings > Developer options.",
-     "settingsPath": "Settings > Additional settings > Developer options",
-     "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
-     "detect": "dev_options_enabled",
-     "instruction_ur": "سیٹنگ میں ⁨Additional settings⁩ پھر ⁨Developer options⁩ کھولیں۔"
-    },
-    {
-     "order": 4,
-     "instruction": "Turn on 'Wireless debugging'. Watch for an account/verification prompt — if it appears, flag this device.",
-     "settingsPath": "Settings > Additional settings > Developer options > Wireless debugging",
-     "deepLinkIntent": "",
-     "detect": "wireless_debugging_enabled",
-     "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ اگر اکاؤنٹ یا تصدیق کا پیغام آئے تو اس فون کو نشان زد کریں۔"
-    },
-    {
-     "order": 5,
-     "instruction": "Tap 'Pair device with pairing code' — NOT the QR option. A small card opens showing a 6-digit code and an IP address & port.",
-     "settingsPath": "Settings > Additional settings > Developer options > Wireless debugging > Pair device with pairing code",
-     "deepLinkIntent": "",
-     "detect": "pairing_screen_open",
-     "instruction_ur": "⁨Pair device with pairing code⁩ پر ٹیپ کریں — ⁨QR⁩ والا آپشن نہیں۔ ایک چھوٹا کارڈ کھلے گا جس پر 6 ہندسوں کا کوڈ اور ⁨IP address & port⁩ لکھا ہوگا۔"
-    },
-    {
-     "order": 6,
-     "instruction": "On the shop phone, tap 'Scan the customer's screen' and point the camera at that card — or type the 6-digit code by hand.",
-     "settingsPath": "",
-     "deepLinkIntent": "",
-     "instruction_ur": "دکان والے فون پر «گاہک کی اسکرین اسکین کریں» دبائیں اور کیمرہ اسی کارڈ پر کریں — یا 6 ہندسوں کا کوڈ ہاتھ سے ٹائپ کر دیں۔"
-    }
-   ],
-   "pairing": {
-    "method": "code",
-    "connectDiscovery": "mdns_then_manual",
-    "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
-   },
-   "caveats": [
-    "ColorOS has at times required extra confirmation or account sign-in for debugging — verify on the no-accounts state."
-   ],
-   "accountGateRisk": "possible",
-   "verified": {
-    "status": "unverified",
-    "onModels": [],
-    "androidApis": [],
-    "notes": "",
-    "date": "2026-05-30"
-   }
-  },
-  {
-   "id": "funtouch",
-   "label": "Vivo (FuntouchOS / OriginOS)",
-   "priority": 10,
-   "match": {
-    "manufacturers": [
-     "vivo",
-     "iqoo"
-    ],
-    "skinPackages": [
-     "com.vivo.*",
-     "com.bbk.*"
-    ]
-   },
-   "steps": [
-    {
-     "order": 1,
-     "instruction": "Open Settings > About phone (or More settings > About phone).",
-     "settingsPath": "Settings > About phone",
-     "deepLinkIntent": "",
-     "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ (یا ⁨More settings⁩ پھر ⁨About phone⁩) میں جائیں۔"
-    },
-    {
-     "order": 2,
-     "instruction": "Tap 'Software version' (or 'Build number') 7 times to enable Developer options.",
-     "settingsPath": "Settings > About phone > Software version",
-     "deepLinkIntent": "",
-     "instruction_ur": "⁨Software version⁩ (یا ⁨Build number⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
-    },
-    {
-     "order": 3,
-     "instruction": "Go to Settings > System management > Developer options (path varies by version).",
-     "settingsPath": "Settings > System management > Developer options",
-     "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
-     "detect": "dev_options_enabled",
-     "instruction_ur": "سیٹنگ میں ⁨System management⁩ پھر ⁨Developer options⁩ کھولیں (راستہ ورژن کے مطابق بدل سکتا ہے)۔"
-    },
-    {
-     "order": 4,
-     "instruction": "Turn on 'Wireless debugging'.",
-     "settingsPath": "Settings > System management > Developer options > Wireless debugging",
-     "deepLinkIntent": "",
-     "detect": "wireless_debugging_enabled",
-     "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔"
-    },
-    {
-     "order": 5,
-     "instruction": "Tap 'Pair device with pairing code' — NOT the QR option. A small card opens showing a 6-digit code and an IP address & port.",
-     "settingsPath": "Settings > System management > Developer options > Wireless debugging > Pair device with pairing code",
-     "deepLinkIntent": "",
-     "detect": "pairing_screen_open",
-     "instruction_ur": "⁨Pair device with pairing code⁩ پر ٹیپ کریں — ⁨QR⁩ والا آپشن نہیں۔ ایک چھوٹا کارڈ کھلے گا جس پر 6 ہندسوں کا کوڈ اور ⁨IP address & port⁩ لکھا ہوگا۔"
-    },
-    {
-     "order": 6,
-     "instruction": "On the shop phone, tap 'Scan the customer's screen' and point the camera at that card — or type the 6-digit code by hand.",
-     "settingsPath": "",
-     "deepLinkIntent": "",
-     "instruction_ur": "دکان والے فون پر «گاہک کی اسکرین اسکین کریں» دبائیں اور کیمرہ اسی کارڈ پر کریں — یا 6 ہندسوں کا کوڈ ہاتھ سے ٹائپ کر دیں۔"
-    }
-   ],
-   "pairing": {
-    "method": "code",
-    "connectDiscovery": "mdns_then_manual",
-    "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
-   },
-   "caveats": [
-    "Developer options location moves between FuntouchOS and OriginOS versions — keep the deep link as the primary jump."
-   ],
-   "accountGateRisk": "possible",
-   "verified": {
-    "status": "unverified",
-    "onModels": [],
-    "androidApis": [],
-    "notes": "",
-    "date": "2026-05-30"
-   }
-  },
-  {
-   "id": "stock",
-   "label": "Stock / near-stock (Pixel, Motorola, Nokia, others)",
-   "priority": 1000,
-   "match": {
-    "isFallback": true
-   },
-   "steps": [
-    {
-     "order": 1,
-     "instruction": "Open Settings > About phone.",
-     "settingsPath": "Settings > About phone",
-     "deepLinkIntent": "",
-     "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
-    },
-    {
-     "order": 2,
-     "instruction": "Tap 'Build number' 7 times to enable Developer options.",
-     "settingsPath": "Settings > About phone > Build number",
-     "deepLinkIntent": "",
-     "instruction_ur": "⁨Build number⁩ پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
-    },
-    {
-     "order": 3,
-     "instruction": "Go to Settings > System > Developer options.",
-     "settingsPath": "Settings > System > Developer options",
-     "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
-     "detect": "dev_options_enabled",
-     "instruction_ur": "سیٹنگ میں ⁨System⁩ پھر ⁨Developer options⁩ کھولیں۔"
-    },
-    {
-     "order": 4,
-     "instruction": "Turn on 'Wireless debugging'.",
-     "settingsPath": "Settings > System > Developer options > Wireless debugging",
-     "deepLinkIntent": "",
-     "detect": "wireless_debugging_enabled",
-     "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔"
-    },
-    {
-     "order": 5,
-     "instruction": "Tap 'Pair device with pairing code' — NOT the QR option. A small card opens showing a 6-digit code and an IP address & port.",
-     "settingsPath": "Settings > System > Developer options > Wireless debugging > Pair device with pairing code",
-     "deepLinkIntent": "",
-     "detect": "pairing_screen_open",
-     "instruction_ur": "⁨Pair device with pairing code⁩ پر ٹیپ کریں — ⁨QR⁩ والا آپشن نہیں۔ ایک چھوٹا کارڈ کھلے گا جس پر 6 ہندسوں کا کوڈ اور ⁨IP address & port⁩ لکھا ہوگا۔"
-    },
-    {
-     "order": 6,
-     "instruction": "On the shop phone, tap 'Scan the customer's screen' and point the camera at that card — or type the 6-digit code by hand.",
-     "settingsPath": "",
-     "deepLinkIntent": "",
-     "instruction_ur": "دکان والے فون پر «گاہک کی اسکرین اسکین کریں» دبائیں اور کیمرہ اسی کارڈ پر کریں — یا 6 ہندسوں کا کوڈ ہاتھ سے ٹائپ کر دیں۔"
-    }
-   ],
-   "pairing": {
-    "method": "code",
-    "connectDiscovery": "mdns_then_manual",
-    "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
-   },
-   "caveats": [
-    "Cleanest path — closest to AOSP. Use as the default when no skin family matches."
-   ],
-   "accountGateRisk": "none",
-   "verified": {
-    "status": "unverified",
-    "onModels": [],
-    "androidApis": [],
-    "notes": "AOSP-standard menu path.",
-    "date": "2026-05-30"
-   }
-  }
- ]
+  ]
 }
