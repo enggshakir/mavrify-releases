@@ -1,0 +1,38 @@
+{
+  "manifestVersion": 1,
+  "updatedAt": "2026-06-07T19:30:00Z",
+  "note": "Walkthrough help videos for the Shopkeeper app. Published to mavrify-releases as release assets (tag videos-v<manifestVersion>) by .github/workflows/publish-walkthrough-videos.yml; the app's VideoCacheRepository downloads + sha256-verifies each entry on first launch and caches it offline. `section` ties a clip to a setup-wizard stage; `family` matches the walkthrough bundle family id (skin-walkthroughs.json). Add new clips by dropping the mp4 in provisioning/walkthrough-videos/, adding an entry here with its sha256 + size, and bumping manifestVersion.",
+  "baseUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/videos-v1/",
+  "videos": [
+    {
+      "id": "one_ui-dev-options-enable",
+      "family": "one_ui",
+      "section": "dev_options",
+      "file": "one_ui-dev-options-enable.mp4",
+      "title_en": "Samsung: turn on Developer options",
+      "title_ur": "سام سنگ: ڈیولپر آپشنز آن کریں",
+      "sha256": "c07dc9bfb0cfb01be99d38d44f808c83d8f88e633395dea62c206d50a4970bd4",
+      "sizeBytes": 526194
+    },
+    {
+      "id": "one_ui-wireless-debugging-on",
+      "family": "one_ui",
+      "section": "wireless_debugging",
+      "file": "one_ui-wireless-debugging-on.mp4",
+      "title_en": "Samsung: turn on Wireless debugging",
+      "title_ur": "سام سنگ: وائرلیس ڈی بگنگ آن کریں",
+      "sha256": "ffcea914c8486f3154887360a63f75a919ee23b8db01b17e97a63bac419ed019",
+      "sizeBytes": 635680
+    },
+    {
+      "id": "one_ui-pairing-card-open",
+      "family": "one_ui",
+      "section": "pairing",
+      "file": "one_ui-pairing-card-open.mp4",
+      "title_en": "Samsung: open the pairing card",
+      "title_ur": "سام سنگ: pairing کارڈ کھولیں",
+      "sha256": "3c42bb15c43d45c48bf2527f5b589f42899148ca5e03a083008c230afac9ade5",
+      "sizeBytes": 88388
+    }
+  ]
+}
