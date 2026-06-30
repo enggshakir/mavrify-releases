@@ -1,12 +1,20 @@
 {
-  "bundleVersion": 6,
-  "updatedAt": "2026-06-07T13:38:34Z",
+  "bundleVersion": 9,
+  "updatedAt": "2026-06-30T00:00:00Z",
   "minAndroidApi": 30,
   "families": [
     {
       "id": "one_ui",
       "label": "Samsung (One UI)",
       "priority": 10,
+      "oobe": {
+        "welcomeImage": "welcome-samsung",
+        "method": "plus_gesture",
+        "instruction": "Draw a plus sign \"+\" on the welcome screen with one finger. (If that fails, try tapping the same spot 6 times.)",
+        "instruction_ur": "اسکرین پر انگلی سے جمع کا نشان \"+\" بنائیں۔ (نہ چلے تو ایک ہی جگہ 6 بار ٹیپ آزمائیں۔)",
+        "recommendCable": false,
+        "confidence": "verified"
+      },
       "match": {
         "manufacturers": [
           "samsung"
@@ -90,6 +98,14 @@
       "id": "miui_hyperos",
       "label": "Xiaomi / Redmi / Poco (MIUI / HyperOS)",
       "priority": 10,
+      "oobe": {
+        "welcomeImage": "welcome-xiaomi",
+        "method": "unsupported",
+        "instruction": "The 6-tap camera usually does NOT work on these. Go straight to the cable (ADB) method.",
+        "instruction_ur": "ان فونز پر کیمرہ والا طریقہ اکثر کام نہیں کرتا۔ سیدھا کیبل (ADB) طریقہ اپنائیں۔",
+        "recommendCable": true,
+        "confidence": "verified"
+      },
       "match": {
         "manufacturers": [
           "xiaomi",
@@ -163,6 +179,14 @@
       "id": "transsion",
       "label": "Tecno / Infinix / itel (HiOS / XOS / itel-OS)",
       "priority": 10,
+      "oobe": {
+        "welcomeImage": "welcome-stock",
+        "method": "six_tap",
+        "instruction": "Try tapping the same spot 6 times first. If nothing happens, use the cable (ADB) method instead.",
+        "instruction_ur": "پہلے ایک ہی جگہ 6 بار ٹیپ کریں۔ نہ چلے تو کیبل (ADB) طریقہ استعمال کریں۔",
+        "recommendCable": true,
+        "confidence": "unverified"
+      },
       "match": {
         "manufacturers": [
           "tecno",
@@ -181,14 +205,18 @@
           "instruction": "Open Settings > About phone.",
           "settingsPath": "Settings > About phone",
           "deepLinkIntent": "",
-          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔"
+          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔",
+          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-01.png",
+          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-01.gif"
         },
         {
           "order": 2,
           "instruction": "Tap 'Build number' (or 'Version') 7 times to enable Developer options.",
           "settingsPath": "Settings > About phone > Build number",
           "deepLinkIntent": "",
-          "instruction_ur": "⁨Build number⁩ (یا ⁨Version⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔"
+          "instruction_ur": "⁨Build number⁩ (یا ⁨Version⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔",
+          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-02.png",
+          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-02.gif"
         },
         {
           "order": 3,
@@ -196,7 +224,9 @@
           "settingsPath": "Settings > System > Developer options",
           "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
           "detect": "dev_options_enabled",
-          "instruction_ur": "سیٹنگ میں ⁨System⁩ پھر ⁨Developer options⁩ کھولیں۔"
+          "instruction_ur": "سیٹنگ میں ⁨System⁩ پھر ⁨Developer options⁩ کھولیں۔",
+          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-03.png",
+          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-03.gif"
         },
         {
           "order": 4,
@@ -204,7 +234,9 @@
           "settingsPath": "Settings > System > Developer options > Wireless debugging",
           "deepLinkIntent": "",
           "detect": "wireless_debugging_enabled",
-          "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔"
+          "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔",
+          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-04.png",
+          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-04.gif"
         },
         {
           "order": 5,
@@ -212,7 +244,9 @@
           "settingsPath": null,
           "deepLinkIntent": null,
           "detect": "pairing_screen_open",
-          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔"
+          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔",
+          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-05.png",
+          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-05.gif"
         }
       ],
       "pairing": {
@@ -237,6 +271,14 @@
       "id": "coloros",
       "label": "Oppo / Realme (ColorOS / realme UI)",
       "priority": 10,
+      "oobe": {
+        "welcomeImage": "welcome-oppo",
+        "method": "six_tap",
+        "instruction": "Tap the same spot 6 times, then wait. (Test once per model — usually the same as the default.)",
+        "instruction_ur": "ایک ہی جگہ 6 بار ٹیپ کریں، پھر رکیں۔ (ہر ماڈل پر ایک بار آزمائیں — عموماً وہی عام طریقہ۔)",
+        "recommendCable": false,
+        "confidence": "inferred"
+      },
       "match": {
         "manufacturers": [
           "oppo",
@@ -309,6 +351,14 @@
       "id": "funtouch",
       "label": "Vivo (FuntouchOS / OriginOS)",
       "priority": 10,
+      "oobe": {
+        "welcomeImage": "welcome-vivo",
+        "method": "six_tap",
+        "instruction": "Tap the same spot 6 times, then wait. (Test once per model — usually the same as the default.)",
+        "instruction_ur": "ایک ہی جگہ 6 بار ٹیپ کریں، پھر رکیں۔ (ہر ماڈل پر ایک بار آزمائیں — عموماً وہی عام طریقہ۔)",
+        "recommendCable": false,
+        "confidence": "inferred"
+      },
       "match": {
         "manufacturers": [
           "vivo",
@@ -380,6 +430,14 @@
       "id": "stock",
       "label": "Stock / near-stock (Pixel, Motorola, Nokia, others)",
       "priority": 1000,
+      "oobe": {
+        "welcomeImage": "welcome-stock",
+        "method": "six_tap",
+        "instruction": "Tap the same spot 6 times quickly, then wait — the camera opens for the QR.",
+        "instruction_ur": "ایک ہی جگہ 6 بار تیزی سے ٹیپ کریں، پھر رکیں — کیمرہ کھل جائے گا۔",
+        "recommendCable": false,
+        "confidence": "verified"
+      },
       "match": {
         "isFallback": true
       },
