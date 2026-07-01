@@ -1,6 +1,6 @@
 {
-  "bundleVersion": 9,
-  "updatedAt": "2026-06-30T00:00:00Z",
+  "bundleVersion": 10,
+  "updatedAt": "2026-07-01T00:00:00Z",
   "minAndroidApi": 30,
   "families": [
     {
@@ -177,7 +177,7 @@
     },
     {
       "id": "transsion",
-      "label": "Tecno / Infinix / itel (HiOS / XOS / itel-OS)",
+      "label": "Tecno / Infinix",
       "priority": 10,
       "oobe": {
         "welcomeImage": "welcome-stock",
@@ -202,51 +202,51 @@
       "steps": [
         {
           "order": 1,
-          "instruction": "Open Settings > About phone.",
-          "settingsPath": "Settings > About phone",
-          "deepLinkIntent": "",
-          "instruction_ur": "سیٹنگ کھولیں، پھر ⁨About phone⁩ میں جائیں۔",
-          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-01.png",
-          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-01.gif"
+          "instruction": "Open Settings, then tap \"My Phone\".",
+          "instruction_ur": "سیٹنگز کھولیں، پھر «My Phone» پر ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/transsion/v10/01-settings.jpg"
         },
         {
           "order": 2,
-          "instruction": "Tap 'Build number' (or 'Version') 7 times to enable Developer options.",
-          "settingsPath": "Settings > About phone > Build number",
-          "deepLinkIntent": "",
-          "instruction_ur": "⁨Build number⁩ (یا ⁨Version⁩) پر 7 بار ٹیپ کریں تاکہ ⁨Developer options⁩ فعال ہو جائیں۔",
-          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-02.png",
-          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-02.gif"
+          "instruction": "In My Phone, scroll down and tap \"Version Info\".",
+          "instruction_ur": "«My Phone» میں نیچے جا کر «Version Info» پر ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/transsion/v10/02-version-info-entry.jpg"
         },
         {
           "order": 3,
-          "instruction": "Go to Settings > System > Developer options.",
-          "settingsPath": "Settings > System > Developer options",
-          "deepLinkIntent": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS",
-          "detect": "dev_options_enabled",
-          "instruction_ur": "سیٹنگ میں ⁨System⁩ پھر ⁨Developer options⁩ کھولیں۔",
-          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-03.png",
-          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-03.gif"
+          "instruction": "Tap \"Build Number\" 7 times quickly.",
+          "instruction_ur": "«Build Number» پر تیزی سے 7 بار ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/transsion/v10/03-build-number.jpg"
         },
         {
           "order": 4,
-          "instruction": "Turn on 'Wireless debugging'. Then tap the WORDS 'Wireless debugging' (not just the switch) to open its own screen. Can't find it? Type 'wireless' in the search box at the top of Settings and choose 'Wireless debugging' — NOT 'USB debugging'.",
-          "settingsPath": "Settings > System > Developer options > Wireless debugging",
-          "deepLinkIntent": "",
-          "detect": "wireless_debugging_enabled",
-          "instruction_ur": "⁨Wireless debugging⁩ آن کریں۔ پھر صرف بٹن نہیں — ⁨Wireless debugging⁩ کے لفظوں پر ٹیپ کر کے اس کی اپنی اسکرین کے اندر جائیں۔ نہ ملے؟ سیٹنگ میں اوپر تلاش کے خانے میں ⁨wireless⁩ لکھیں اور ⁨Wireless debugging⁩ چنیں — ⁨USB debugging⁩ نہیں۔",
-          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-04.png",
-          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-04.gif"
+          "instruction": "You'll see \"You are now a developer\".",
+          "instruction_ur": "«You are now a developer» کا پیغام آئے گا۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/transsion/v10/04-developer-on.jpg"
         },
         {
           "order": 5,
-          "instruction": "Done — the customer's phone is ready! Go back to this app: the next screen will tell you exactly when to open the pairing card. Do NOT open 'Pair device with pairing code' yet — its 6-digit code expires quickly.",
-          "settingsPath": null,
-          "deepLinkIntent": null,
-          "detect": "pairing_screen_open",
-          "instruction_ur": "بس — گاہک کا فون تیار ہے! اب واپس اس ایپ میں آئیں؛ اگلی اسکرین خود بتائے گی کہ pairing والا کارڈ کب کھولنا ہے۔ ابھی ⁨Pair device with pairing code⁩ نہ کھولیں — اس کا 6 ہندسوں کا کوڈ جلدی ختم ہو جاتا ہے۔",
-          "imageRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-05.png",
-          "gifRef": "https://mavrify-public.r2.dev/walkthroughs/adb/transsion/v9/step-05.gif"
+          "instruction": "Back in Settings, tap Search, type \"debug\", then tap \"Wireless Debugging\".",
+          "instruction_ur": "سیٹنگز میں Search پر «debug» لکھیں، پھر «Wireless Debugging» پر ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/transsion/v10/05-search-debug.jpg"
+        },
+        {
+          "order": 6,
+          "instruction": "Make sure the phone is on Wi-Fi, turn ON \"Wireless debugging\", then tap \"Allow\".",
+          "instruction_ur": "پہلے فون کو Wi-Fi سے جوڑیں، «Wireless debugging» آن کریں، پھر «Allow» دبائیں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/transsion/v10/06-allow.jpg"
+        },
+        {
+          "order": 7,
+          "instruction": "Tap \"Pair device with pairing code\".",
+          "instruction_ur": "«Pair device with pairing code» پر ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/transsion/v10/07-pair-options.jpg"
+        },
+        {
+          "order": 8,
+          "instruction": "Enter this 6-digit code and IP into the shop app.",
+          "instruction_ur": "یہ 6 ہندسوں کا کوڈ اور IP دکان ایپ میں درج کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/transsion/v10/08-pairing-code.jpg"
         }
       ],
       "pairing": {
@@ -260,11 +260,15 @@
       ],
       "accountGateRisk": "possible",
       "verified": {
-        "status": "unverified",
-        "onModels": [],
-        "androidApis": [],
-        "notes": "Meaningful PK volume; test for Paytrigger interaction + Android-Go menu differences.",
-        "date": "2026-05-30"
+        "status": "verified",
+        "onModels": [
+          "Infinix Hot 60 Pro+ / X6886"
+        ],
+        "androidApis": [
+          35
+        ],
+        "notes": "ADB walkthrough captured on XOS 15.1.2.129 / Android 15.",
+        "date": "2026-07-01"
       }
     },
     {
@@ -348,8 +352,106 @@
       }
     },
     {
+      "id": "vivo_originos",
+      "label": "Vivo (OriginOS 6)",
+      "priority": 10,
+      "oobe": {
+        "welcomeImage": "welcome-vivo",
+        "method": "six_tap",
+        "instruction": "Tap the same spot 6 times, then wait. (Test once per model — usually the same as the default.)",
+        "instruction_ur": "ایک ہی جگہ 6 بار ٹیپ کریں، پھر رکیں۔ (ہر ماڈل پر ایک بار آزمائیں — عموماً وہی عام طریقہ۔)",
+        "recommendCable": false,
+        "confidence": "inferred"
+      },
+      "match": {
+        "manufacturers": [
+          "vivo"
+        ],
+        "skinPackages": [
+          "com.vivo.*",
+          "com.bbk.*"
+        ]
+      },
+      "steps": [
+        {
+          "order": 1,
+          "instruction": "Open Settings, then tap \"About phone\".",
+          "instruction_ur": "سیٹنگز کھولیں، پھر «About phone» پر ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/01-settings.jpg"
+        },
+        {
+          "order": 2,
+          "instruction": "In About phone, tap \"Version info\".",
+          "instruction_ur": "«About phone» میں «Version info» پر ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/02-version-info-entry.jpg"
+        },
+        {
+          "order": 3,
+          "instruction": "Tap \"Software version\" 7 times quickly.",
+          "instruction_ur": "«Software version» پر تیزی سے 7 بار ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/03-software-version.jpg"
+        },
+        {
+          "order": 4,
+          "instruction": "You'll see \"You are now a developer\".",
+          "instruction_ur": "«You are now a developer» کا پیغام آئے گا۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/04-developer-on.jpg"
+        },
+        {
+          "order": 5,
+          "instruction": "Back in Settings, tap Search, type \"debug\", then tap \"Wireless debugging\".",
+          "instruction_ur": "سیٹنگز میں Search پر «debug» لکھیں، پھر «Wireless debugging» پر ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/05-search-debug.jpg"
+        },
+        {
+          "order": 6,
+          "instruction": "Turn ON the \"Developer options\" switch at the top, then tap OK.",
+          "instruction_ur": "اوپر «Developer options» سوئچ آن کریں، پھر OK دبائیں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/06-allow-dev-settings.jpg"
+        },
+        {
+          "order": 7,
+          "instruction": "Make sure the phone is on Wi-Fi, turn ON \"Wireless debugging\", then tap \"Allow\".",
+          "instruction_ur": "پہلے فون کو Wi-Fi سے جوڑیں، «Wireless debugging» آن کریں، پھر «Allow» دبائیں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/07-allow.jpg"
+        },
+        {
+          "order": 8,
+          "instruction": "Tap \"Pair device with pairing code\".",
+          "instruction_ur": "«Pair device with pairing code» پر ٹیپ کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/08-pair-options.jpg"
+        },
+        {
+          "order": 9,
+          "instruction": "Enter this 6-digit code and IP into the shop app.",
+          "instruction_ur": "یہ 6 ہندسوں کا کوڈ اور IP دکان ایپ میں درج کریں۔",
+          "imageRef": "https://assets.payguard.mavrify.com/walkthroughs/adb/vivo_originos/v10/09-pairing-code.jpg"
+        }
+      ],
+      "pairing": {
+        "method": "code",
+        "connectDiscovery": "mdns_then_manual",
+        "notes": "Pair-with-code + mDNS is the device-proven path (docs/21 §6.1). QR pairing is NOT viable: libadb-android is a client only and cannot act as the pairing server a QR scan requires."
+      },
+      "caveats": [
+        "OriginOS 6 shows Developer options after the 7-tap, but the master Developer options switch must still be enabled before Wireless debugging can be turned on."
+      ],
+      "accountGateRisk": "possible",
+      "verified": {
+        "status": "verified",
+        "onModels": [
+          "Vivo Y05 / V2556"
+        ],
+        "androidApis": [
+          36
+        ],
+        "notes": "ADB walkthrough captured on OriginOS 6 / Android 16.",
+        "date": "2026-07-01"
+      }
+    },
+    {
       "id": "funtouch",
-      "label": "Vivo (FuntouchOS / OriginOS)",
+      "label": "Vivo (Funtouch)",
       "priority": 10,
       "oobe": {
         "welcomeImage": "welcome-vivo",
