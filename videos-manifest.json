@@ -1,8 +1,8 @@
 {
-  "manifestVersion": 3,
-  "updatedAt": "2026-07-02T22:14:45Z",
+  "manifestVersion": 4,
+  "updatedAt": "2026-07-03T10:55:12Z",
   "note": "Walkthrough help videos for the Shopkeeper app. Published to mavrify-releases as release assets (tag videos-v<manifestVersion>) by .github/workflows/publish-walkthrough-videos.yml; the app's VideoCacheRepository downloads + sha256-verifies each entry on first launch and caches it offline. `section` ties a clip to a setup-wizard stage; `family` matches the walkthrough bundle family id (skin-walkthroughs.json). Add new clips by dropping the mp4 in provisioning/walkthrough-videos/, adding an entry here with its sha256 + size, and bumping manifestVersion.",
-  "baseUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/videos-v3/",
+  "baseUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/videos-v4/",
   "videos": [
     {
       "id": "one_ui-dev-options-enable",
@@ -41,8 +41,8 @@
       "file": "vivo_originos-full-process.mp4",
       "title_en": "Vivo: full setup walkthrough",
       "title_ur": "Vivo: پورا سیٹ اپ طریقہ",
-      "sha256": "a013977a2371c60e257c2049c5c183964615c0e61921b88d5e64fbc83787056f",
-      "sizeBytes": 1994056
+      "sha256": "a99ec276b5174b358df3b15519b8b12cf82ee7295354941dc341b7a5c0d20b03",
+      "sizeBytes": 1604640
     },
     {
       "id": "transsion-full-process",
