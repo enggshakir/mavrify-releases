@@ -1,10 +1,10 @@
 {
-  "latestVersionCode": 272,
-  "latestVersionName": "0.9.259-poc",
-  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/shopkeeper-v0.9.259-poc/mavrify-shopkeeper-v0.9.259-poc.apk",
-  "apkSha256": "16add1faacd6dcb33e5e6b343781afa809ab27aec225c2363f7b51e18334dfea",
+  "latestVersionCode": 275,
+  "latestVersionName": "0.9.262-poc",
+  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/shopkeeper-v0.9.262-poc/mavrify-shopkeeper-v0.9.262-poc.apk",
+  "apkSha256": "6fc9231eeffe83adb338ed0764b20e3dd381d8e202348be9bdc70665b0a3fbef",
   "apkSizeBytes": 117860854,
   "minSupportedVersionCode": 1,
-  "releaseNotes": "Auto-built from private repo commit 27db31888f7751a0d098c688705b245b7394e525",
-  "releasedAt": "2026-07-11T07:57:32Z"
+  "releaseNotes": "Auto-built from private repo commit f4d11ac4f8bacd64304232175709eaf19a0ea9d5",
+  "releasedAt": "2026-07-12T15:04:55Z"
 }
