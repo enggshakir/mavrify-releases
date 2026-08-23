@@ -1,15 +1,15 @@
 {
-  "latestVersionCode": 182,
-  "latestVersionName": "0.9.155-poc",
-  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/lock-vc182-6c4906be66c9343ae781b09cc10da5a2abed9bf4ae964ad94d2e2e607aa2b095/mavrify-lock-vc182-6c4906be66c9343ae781b09cc10da5a2abed9bf4ae964ad94d2e2e607aa2b095.apk",
-  "apkSha256": "6c4906be66c9343ae781b09cc10da5a2abed9bf4ae964ad94d2e2e607aa2b095",
-  "apkSizeBytes": 4693877,
+  "latestVersionCode": 216,
+  "latestVersionName": "0.9.186-poc",
   "minSupportedVersionCode": 1,
-  "releaseNotes": "Auto-built from private repo commit 2addd6fc1864231e0d3de927e0af26035438fd51",
-  "releasedAt": "2026-08-02T22:43:28Z",
+  "releaseNotes": "Auto-built from enggshakir/mavrify commit 441d50afdb4c6eaa30129f2b85994e8918a0cc19",
+  "releasedAt": "2026-08-23T22:21:45Z",
+  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/lock-vc216-b0dd2664fbaacea2fc9493c303a8ce4e7cf41ca1f5118ba9cefa596aa9aaf4bc/mavrify-lock-vc216-b0dd2664fbaacea2fc9493c303a8ce4e7cf41ca1f5118ba9cefa596aa9aaf4bc.apk",
+  "apkSha256": "b0dd2664fbaacea2fc9493c303a8ce4e7cf41ca1f5118ba9cefa596aa9aaf4bc",
+  "apkSizeBytes": 4845196,
   "provenance": {
-    "kind": "legacy-signed-manifest-migration",
-    "sourceRepository": "enggshakir/mavrify-releases",
-    "sourceCommitSha": "22bb20312d87263de49a9609b4b8705bd64f7a72"
+    "kind": "github-actions-source",
+    "sourceRepository": "enggshakir/mavrify",
+    "sourceCommitSha": "441d50afdb4c6eaa30129f2b85994e8918a0cc19"
   }
 }
