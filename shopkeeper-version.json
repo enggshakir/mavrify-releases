@@ -1,15 +1,15 @@
 {
-  "latestVersionCode": 364,
-  "latestVersionName": "0.9.347-poc",
+  "latestVersionCode": 422,
+  "latestVersionName": "0.9.403-poc",
   "minSupportedVersionCode": 1,
-  "releaseNotes": "Auto-built from enggshakir/mavrify commit 6c291218b10f9767a50a446a4b2d7146d46d62b9",
-  "releasedAt": "2026-08-24T21:03:47Z",
-  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/shopkeeper-vc364-f9889affa3dce86b21cbfde5b2f6095ab9433959344be01e91d04dd05ea8adae/mavrify-shopkeeper-vc364-f9889affa3dce86b21cbfde5b2f6095ab9433959344be01e91d04dd05ea8adae.apk",
-  "apkSha256": "f9889affa3dce86b21cbfde5b2f6095ab9433959344be01e91d04dd05ea8adae",
-  "apkSizeBytes": 118132298,
+  "releaseNotes": "Auto-built from enggshakir/mavrify commit ffc621f4827aa0d9c438c3b7f5af2aba2f61d2d0",
+  "releasedAt": "2026-09-11T19:49:49Z",
+  "apkUrl": "https://github.com/enggshakir/mavrify-releases/releases/download/shopkeeper-vc422-d69522b98da6976189840f4439fbe01d047400868e5b85940e81c857c82bd7ca/mavrify-shopkeeper-vc422-d69522b98da6976189840f4439fbe01d047400868e5b85940e81c857c82bd7ca.apk",
+  "apkSha256": "d69522b98da6976189840f4439fbe01d047400868e5b85940e81c857c82bd7ca",
+  "apkSizeBytes": 143346941,
   "provenance": {
     "kind": "github-actions-source",
     "sourceRepository": "enggshakir/mavrify",
-    "sourceCommitSha": "6c291218b10f9767a50a446a4b2d7146d46d62b9"
+    "sourceCommitSha": "ffc621f4827aa0d9c438c3b7f5af2aba2f61d2d0"
   }
 }
